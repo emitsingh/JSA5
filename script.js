@@ -1,0 +1,148 @@
+//Q1. Find the Product.
+
+let arr = [2,6,4,8,1,2,5,33];
+let pro=1;
+for(let i of arr)
+    pro*=i;
+console.log(pro);
+
+
+
+//Q2. Find the Sum.
+
+let arr1 = [2,6,4,8,1,2,5,33];
+let sum=1;
+for(let i of arr1)
+    sum+=i;
+console.log(sum);
+
+
+//Q3. Count Occurrences
+
+let ar =[3,7,2,3,8,1,3,2,3,5];
+let k = 3;
+let count=0;
+for(let i of ar)
+{
+    if(i==k)
+        count++;
+}
+console.log(count);
+
+
+
+//Q4. Even Odd
+
+let ar1 =[3,7,2,3,8,1,3,2,3,5];
+let even_sum=0;
+let odd_sum=0;
+function summ(){
+    for(let i of ar1)
+    {
+        if(i%2==0)
+            even_sum+=i;
+        else
+            odd_sum+=i;
+    }
+    return [even_sum,odd_sum];
+}
+console.log(summ(ar1));
+
+
+//Q5. Find whether the number is present or not
+
+let arrr = [3,7,22,66,4,1,9];
+let num = 66;
+if(arrr.includes(num))
+    console.log("Yes");
+else
+    console.log('No');   
+
+
+
+//Q6. Higher Age
+
+
+let ages = [34,78,12,22,67,9,36,17];
+let ab=[];
+
+for(let i of ages)
+{
+    if(i>18)
+        ab.push(i);
+}
+console.log(ab);
+
+
+
+// Q7. Increment the Array Elements
+
+var inc = [3,7,1,2,9,33,88];
+inc = inc.map(num=>num + 1);
+console.log(inc);
+
+
+//Q8. Pass or Fail
+
+
+
+let marks = [33,93,77,56,10,79,99];
+let pass = true;
+for(let i of marks)
+{
+    if(i<32)
+    {
+        pass=false;
+        break;
+    }
+}
+if(pass==true)
+    console.log('Yes');
+else
+    console.log('No');
+    
+    
+
+// Q9. Unique Color Shirt
+
+
+let n = 7;
+let shirts = [2,1,3,2,5,3,4];
+let unique;
+let freq=0;
+
+for(let i=0;i<shirts.length;i++)
+{
+    unique=true;
+    for(let j=0;j<shirts.length;j++)
+    {
+        if( j!=i && (shirts[i]==shirts[j]))
+        {
+            unique=false;
+            break;
+        }
+        
+    }
+    if(unique==true)
+        freq++;
+}
+console.log(freq);
+
+
+//Q10. Min and Max
+
+let qwr = [44,121,67,33,96,100,56];
+
+let min=qwr[0];
+let max=qwr[0];
+
+for(let i of qwr)
+{
+    
+    if(i>max)
+        max=i;
+    if(i<min)
+        min=i;
+}
+console.log(min + " " + max);
+
